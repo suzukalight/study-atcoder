@@ -16,7 +16,8 @@ namespace abc109c {
     return n;
   };
 
-  const operate = (xn: number[], n: number, x: number) => {
+  const solve = (xn: number[], n: number, x: number) => {
+    // すべての |X-xi| について約数であれば良い → 最大公約数を求める
     let r = Math.abs(xn[0] - x);
     for (let i = 1; i < n; i++) {
       r = gcd(r, Math.abs(xn[i] - x));
@@ -25,12 +26,12 @@ namespace abc109c {
   };
 
   const main = (input: string) => {
-    const [_nx, _xn] = input.split('\n');
-    const [n, x] = _nx.split(' ').map((n) => parseInt(n, 10));
-    const xn = _xn.split(' ').map((n) => parseInt(n, 10));
-   
-    const result = operate(xn, n, x);
-   
+    const [_nx, _xn] = input.split("\n");
+    const [n, x] = _nx.split(" ").map((n) => parseInt(n, 10));
+    const xn = _xn.split(" ").map((n) => parseInt(n, 10));
+
+    const result = solve(xn, n, x);
+
     console.log(result);
   };
 

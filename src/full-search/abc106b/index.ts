@@ -1,7 +1,5 @@
 namespace abc106b {
   const check = (n: number) => {
-    if (n % 2 === 0) return false;
-
     let count = 0;
     for (let i = 1; i <= n; i++) {
       if (n % i === 0) count++;
@@ -11,8 +9,9 @@ namespace abc106b {
   };
 
   const solve = (n: number) => {
+    // 約数が8個になる奇数を全探索する
     let count = 0;
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i += 2) {
       if (check(i)) count++;
     }
     return count;

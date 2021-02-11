@@ -7,6 +7,8 @@ namespace abc157c {
   };
 
   const solve = (n: number, m: number, smcm: number[][]) => {
+    // N桁の整数の最大最小値を求め、その範囲の整数の各桁の値と、与えられた条件がマッチするかを全探索する
+    // ただし、1桁の数値の場合は、0を有効な値とする
     const _minDigit = Math.pow(10, n - 1);
     const minDigit = _minDigit === 1 ? 0 : _minDigit;
     const maxDigit = Math.pow(10, n) - 1;
