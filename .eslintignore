@@ -1,0 +1,16 @@
+/.eslintrc.js
+/.prettierrc.js
+/jest.config.js
+/husky.config.js
+/next.config.js
+/lint-staged.config.js
+/next-seo.config.js
+node_modules/**
+**/node_modules/**
+**/migration/*
+**/lib/*
+**/build/*
+**/public/*
+**/.next/*
+**/_generated/*
+**/coverage/*
