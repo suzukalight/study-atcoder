@@ -1,27 +1,25 @@
-namespace abc106b {
-  const check = (n: number) => {
-    let count = 0;
-    for (let i = 1; i <= n; i++) {
-      if (n % i === 0) count++;
-    }
+const check = (n: number) => {
+  let count = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) count++;
+  }
 
-    return count === 8;
-  };
+  return count === 8;
+};
 
-  const solve = (n: number) => {
-    // 約数が8個になる奇数を全探索する
-    let count = 0;
-    for (let i = 1; i <= n; i += 2) {
-      if (check(i)) count++;
-    }
-    return count;
-  };
+const solve = (n: number) => {
+  // 約数が8個になる奇数を全探索する
+  let count = 0;
+  for (let i = 1; i <= n; i += 2) {
+    if (check(i)) count++;
+  }
+  return count;
+};
 
-  const main = (input: string) => {
-    const n = parseInt(input.trim(), 10);
-    console.log(solve(n));
-  };
+export const main = (input: string) => {
+  const n = parseInt(input.trim(), 10);
+  console.log(solve(n));
+};
 
-  const input = `105`;
-  main(input);
-}
+const input = `105`;
+main(input);
