@@ -13,10 +13,10 @@ export const main = (input: string) => {
 
   const result = max < sum - max ? 'Yes' : 'No';
 
-  console.log(result);
+  return result;
 };
 
-const input = `4
-3 8 5 1
-`;
-main(input);
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+  console.log(main(input));
+};
