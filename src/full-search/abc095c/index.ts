@@ -11,8 +11,10 @@ export const main = (input: string) => {
     minValue = Math.min(minValue, c * 2 * i + a * cx + b * cy);
   }
 
-  console.log(minValue);
+  return minValue;
 };
 
-const input = `1500 2000 500 90000 100000`;
-main(input);
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+  console.log(main(input));
+};

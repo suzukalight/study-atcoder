@@ -35,17 +35,10 @@ export const main = (input: string) => {
   const n = parseInt(_n, 10);
   const xy = _xy.map((i) => i.split(' ').map((j) => parseInt(j, 10)));
 
-  console.log(solve(n, xy));
+  return solve(n, xy);
 };
 
-const input = `8
--406 10
-512 859
-494 362
--955 -475
-128 553
--986 -885
-763 77
-449 310
-`;
-main(input);
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+  console.log(main(input));
+};

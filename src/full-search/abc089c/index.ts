@@ -28,14 +28,10 @@ export const main = (input: string) => {
   const [_n, ...sn] = input.split('\n');
   const n = parseInt(_n, 10);
 
-  console.log(solve(n, sn));
+  return solve(n, sn);
 };
 
-const input = `5
-CHOKUDAI
-RNG
-MAKOTO
-AOKI
-RINGO
-`;
-main(input);
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+  console.log(main(input));
+};

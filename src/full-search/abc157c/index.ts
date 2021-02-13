@@ -25,12 +25,10 @@ export const main = (input: string) => {
   const [n, m] = _nm.split(' ').map((i) => parseInt(i, 10));
   const smcm = _smcm.map((i) => i.split(' ').map((j) => parseInt(j, 10)));
 
-  console.log(solve(n, m, smcm));
+  return solve(n, m, smcm);
 };
 
-const input = `3 3
-1 7
-3 2
-1 7
-`;
-main(input);
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+  console.log(main(input));
+};
