@@ -3,7 +3,7 @@
     "module": "commonjs",
     "target": "es2020",
     "sourceMap": true,
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
   "exclude": ["node_modules"]
 }

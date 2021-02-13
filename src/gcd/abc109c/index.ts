@@ -31,10 +31,9 @@ export const main = (input: string) => {
 
   const result = solve(xn, n, x);
 
-  console.log(result);
+  return result;
 };
 
-const input = `3 81
-33 105 57  
-`;
-main(input);
+export const output = (input: string) => {
+  console.log(main(input));
+};

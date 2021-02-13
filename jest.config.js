@@ -1,17 +1,15 @@
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
-  roots: ["<rootDir>/src"],
-  testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
-  // setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
-  // snapshotSerializers: ['enzyme-to-json/serializer'],
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  roots: ['<rootDir>/src'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   globals: {
-    "ts-jest": {
-      tsconfig: "<rootDir>/tsconfig.jest.json",
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.json',
     },
   },
 };
