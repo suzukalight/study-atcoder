@@ -22,8 +22,10 @@ const solve = (n: number) => {
 export const main = (input: string) => {
   const n = parseInt(input.trim(), 10);
 
-  console.log(solve(n));
+  return solve(n);
 };
 
-const input = `9876543210`;
-main(input);
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
+  console.log(main(input));
+};

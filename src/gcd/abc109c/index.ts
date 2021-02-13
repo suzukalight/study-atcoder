@@ -34,6 +34,7 @@ export const main = (input: string) => {
   return result;
 };
 
-export const output = (input: string) => {
+export const fromStdin = () => {
+  const input = require('fs').readFileSync('/dev/stdin', 'utf8');
   console.log(main(input));
 };
